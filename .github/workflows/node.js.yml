@@ -33,6 +33,12 @@ jobs:
     - run: npm run build --if-present
     - run: npm start
 
+    - name: Pull
+      uses: actions-js/pull@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: "master"
+
     - name: Push
       uses: actions-js/push@master
       with:
