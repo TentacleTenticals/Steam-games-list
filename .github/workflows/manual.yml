@@ -17,9 +17,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: install packages
-        run: npm ci
-
       - name: Run index.js
         run: node app/main.js
 
