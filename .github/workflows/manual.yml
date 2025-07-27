@@ -20,7 +20,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Run index.js
+      - uses: node@v16
+      - name: Run yo
         run: node app/main.js
 
       - name: Push
