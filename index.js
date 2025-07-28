@@ -4,7 +4,6 @@ class Func {
   check = {
     type: async () => {
       const params = this.get.params();
-      // if(!params.app||!params.apps) return;
 
       const db = await this.get.list();
       console.log('DB', db);
