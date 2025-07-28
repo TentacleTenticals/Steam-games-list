@@ -35,10 +35,8 @@ jobs:
 
     - name: Pull
       run: | 
-        git fetch
-        git checkout -f origin/master
-        git checkout master
-        git pull origin/master
+        git switch -f master
+        git pull
 
     - name: Push
       uses: actions-js/push@master
