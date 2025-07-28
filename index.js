@@ -15,7 +15,6 @@ class Func {
         for(const item in db){
           if(item.name.match(params.app)) data.push(item);
         }
-        // const item = this.get.app(db, params.app);
         return data;
       }else
       if(params?.apps){
