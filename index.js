@@ -16,7 +16,7 @@ class Func {
 
       return data;
     }
-  },
+  };
   write = {
     list: async () => {
       const data = this.get.params();
@@ -29,7 +29,7 @@ class Func {
 
       // const item = db.find(data.key);
     }
-  }
+  };
 }
 
 new Func().write.list()
