@@ -57,7 +57,6 @@ class Func {
     list: async () => {
       const data = await this.check.type();
       if(!data) return;
-
       console.log('Data', data);
 
       data.forEach(item => {
