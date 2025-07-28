@@ -34,8 +34,7 @@ jobs:
     - run: npm start
 
     - name: Pull
-      run: | 
-        git checkout -f origin/master
+      run: |
         git checkout master
         git pull --rebase
 
