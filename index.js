@@ -34,7 +34,7 @@ class Func {
       const id = this.get.app(db.applist.apps, data.key);
       console.log('ID', id);
       if(id === -1) return;
-      const app = db.applist.apps[app];
+      const app = db.applist.apps[id];
       console.log('App', app);
 
       El.Div({
