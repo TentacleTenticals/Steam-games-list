@@ -1,7 +1,4 @@
 import {El} from './src/m.js';
-// import {db} from './db.json';
-
-console.log('Yo!');
 
 class Func {
   get = {
@@ -44,8 +41,6 @@ class Func {
         path: document.body,
         text: JSON.stringify(app)
       });
-
-      // const item = db.find(data.key);
     }
   };
 }
