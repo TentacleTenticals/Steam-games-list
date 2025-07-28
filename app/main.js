@@ -19,20 +19,20 @@ const getList = (o) => fetch(o.url+ new URLSearchParams(o.params), {
   }
 );
 
-// writer({
-//   test: 'fest2'
-// });
+writer({
+  test: 'fest2'
+});
 
 
-getList({
-  url: 'http://api.steampowered.com/ISteamApps/GetAppList/v0002/?',
-  format: 'json'
-}).then(
-  res => {
-    console.log('Res', res);
-    if(res) writer(res);
-  }
-);
+// getList({
+//   url: 'http://api.steampowered.com/ISteamApps/GetAppList/v0002/?',
+//   format: 'json'
+// }).then(
+//   res => {
+//     console.log('Res', res);
+//     if(res) writer(res);
+//   }
+// );
 
 // writer({
 //   test: 'fest'
