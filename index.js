@@ -11,7 +11,7 @@ class Func {
       if(params?.app){
         console.log('APP');
         const data = [];
-        for(const item in db){
+        for(const item of db){
           if(item.name.match(params.app)) data.push(item);
         }
         return data;
@@ -21,7 +21,7 @@ class Func {
         const apps = params.apps.split(',');
         const data = [];
         apps.forEach(app => {
-          for(const item in db){
+          for(const item of db){
             if(item.name.match(app)) data.push(item);
           }
         })
