@@ -17,7 +17,7 @@ class Func {
       return data;
     },
     app: (list, name) => {
-      const s = list.find(i => i.name.match(name));
+      const s = list.find(i => i.name.lowerCase().match(name));
       return list.indexOf(s);
     }
   };
@@ -34,8 +34,16 @@ class Func {
       if(!db.applist && !db.applist.apps) return;
       console.log('DB', db.applist.apps);
 
-      const app = this.get.app(db.applist.apps, data.key);
+      const id = this.get.app(db.applist.apps, data.key);
+      console.log('ID', id);
+      if(id === -1) return;
+      const app = db.applist.apps[app];
       console.log('App', app);
+
+      El.Div({
+        path: document.body,
+        text: JSON.stringify(app)
+      });
 
       // const item = db.find(data.key);
     }
