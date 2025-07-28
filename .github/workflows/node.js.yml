@@ -35,7 +35,7 @@ jobs:
 
     - name: Pull
       run: |
-        git checkout master
+        git checkout -b master
         git pull --rebase
 
     - name: Push
