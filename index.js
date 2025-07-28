@@ -4,16 +4,18 @@ class Func {
   check = {
     type: async () => {
       const params = this.get.params();
-      if(!params.app||!params.apps) return;
+      // if(!params.app||!params.apps) return;
 
       const db = await this.get.list();
       console.log('DB', db);
       
-      if(params.app){
+      if(params?.app){
+        console.log('APP');
         const item = this.get.app(db, params.app);
         return [item];
       }else
-      if(params.apps){
+      if(params?.apps){
+        console.log('APPS');
         const apps = params.apps.split(',');
         const data = [];
         apps.forEach(app => {
