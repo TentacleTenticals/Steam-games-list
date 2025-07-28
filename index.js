@@ -17,7 +17,7 @@ class Func {
       return data;
     },
     app: (list, name) => {
-      const s = list.find(i => i.name.lowerCase().match(name));
+      const s = list.find(i => i.name.toLowerCase().match(name));
       return list.indexOf(s);
     }
   };
