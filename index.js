@@ -51,7 +51,7 @@ class Func {
       if(!dbGet) return;
       const db = await dbGet.json();
       if(!db) return;
-      return db;
+      return db.applist?.apps;
     }
   };
   write = {
