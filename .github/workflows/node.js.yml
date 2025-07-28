@@ -35,7 +35,7 @@ jobs:
 
     - name: Pull
       run: | 
-        git switch -f master
+        git switch -f origin/master
         git pull
 
     - name: Push
