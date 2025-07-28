@@ -12,7 +12,7 @@ class Func {
         console.log('APP');
         const data = [];
         for(const item of db){
-          if(item.name.match(params.app)) data.push(item);
+          if(item.name.toLowerCase().match(params.app)) data.push(item);
         }
         return data;
       }else
@@ -22,7 +22,7 @@ class Func {
         const data = [];
         apps.forEach(app => {
           for(const item of db){
-            if(item.name.match(app)) data.push(item);
+            if(item.name.toLowerCase().match(app)) data.push(item);
           }
         })
         return data;
