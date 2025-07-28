@@ -23,7 +23,7 @@ class Func {
       if(!data) return;
       if(!data.key) return;
 
-      const db = await fetch('http://TentacleTenticals.github.io/Steam-games-list/db.json');
+      const db = await fetch('https://TentacleTenticals.github.io/Steam-games-list/db.json');
       if(!db) return;
       console.log('DB', db);
 
