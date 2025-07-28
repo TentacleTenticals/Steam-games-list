@@ -35,8 +35,9 @@ jobs:
 
     - name: Pull
       run: | 
-        git switch -f origin/master
-        git pull
+        git checkout -f origin/master
+        git checkout master
+        git pull --rebase
 
     - name: Push
       uses: actions-js/push@master
