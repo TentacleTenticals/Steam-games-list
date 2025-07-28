@@ -31,7 +31,7 @@ class Func {
       if(!dbGet) return;
       const db = await dbGet.json();
       if(!db) return;
-      if(db.applist && db.applist.apps) return;
+      if(!db.applist && !db.applist.apps) return;
       console.log('DB', db.applist.apps);
 
       const app = this.get.app(db.applist.apps, data.key);
