@@ -70,4 +70,4 @@ class Func {
   };
 }
 
-new Func().write.list()
+new Func().write.list();
