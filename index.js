@@ -15,6 +15,10 @@ class Func {
       };
 
       return data;
+    },
+    app: (list, name) => {
+      const s = list.find(i => i.name.match(name));
+      return list.indexOf(s);
     }
   };
   write = {
@@ -23,9 +27,15 @@ class Func {
       if(!data) return;
       if(!data.key) return;
 
-      const db = await fetch('https://TentacleTenticals.github.io/Steam-games-list/db.json');
+      const dbGet = await fetch('https://TentacleTenticals.github.io/Steam-games-list/db.json');
+      if(!dbGet) return;
+      const db = await dbGet.json();
       if(!db) return;
-      console.log('DB', db);
+      if(db.applist && db.applist.apps) return;
+      console.log('DB', db.applist.apps);
+
+      const app = this.get.app(db.applist.apps, data.key);
+      console.log('App', app);
 
       // const item = db.find(data.key);
     }
